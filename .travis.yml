@@ -1,0 +1,19 @@
+language: go
+go: 
+  - "1.14"
+install:
+- pyenv global 3.7
+- pip3 install ansible
+- "./configure"
+- make
+script:
+- make test
+notifications:
+  webhooks:
+    urls:
+      - http://savageking.io:12811/travis
+    on_success: always
+    on_failure: always 
+    on_start:   always 
+    on_cancel:  always
+    on_error:   always
