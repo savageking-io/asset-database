@@ -2,12 +2,13 @@ language: go
 go: 
   - "1.14"
 install:
-- pyenv global 3.7
-- pip3 install ansible
-- "./configure"
-- make
+  - pyenv install -v 3.7
+  - pyenv global 3.7
+  - pip3 install ansible
+  - "./configure"
+  - make
 script:
-- make test
+  - make test
 notifications:
   webhooks:
     urls:
