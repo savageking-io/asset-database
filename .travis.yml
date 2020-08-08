@@ -2,8 +2,8 @@ language: go
 go: 
   - "1.14"
 install:
-  - pyenv install -v 3.7
-  - pyenv global 3.7
+  - pyenv install -v 3.7-dev
+  - pyenv global 3.7-dev
   - pip3 install ansible
   - "./configure"
   - make
