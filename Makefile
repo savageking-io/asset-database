@@ -16,7 +16,9 @@ db-darwin: bin/darwin/$(BINARY)
 all: linux windows darwin test
 
 SOURCES=main.go \
-		config.go
+		config.go \
+		database.go \
+		service.go
 
 test:
 	$(CC) test . -v

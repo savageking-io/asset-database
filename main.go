@@ -28,7 +28,7 @@ func main() {
 			Flags: []cli.Flag{},
 			Action: func(c *cli.Context) error {
 				log.SetLevel(log.TraceLevel)
-				return nil
+				return ServiceStart()
 			},
 		},
 	}
