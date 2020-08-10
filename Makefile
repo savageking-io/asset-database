@@ -18,6 +18,8 @@ all: linux windows darwin test
 SOURCES=main.go \
 		config.go \
 		database.go \
+		user.go \
+		rest.go \
 		service.go
 
 test:

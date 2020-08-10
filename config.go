@@ -9,6 +9,7 @@ import (
 
 type Config struct {
 	Database *DatabaseConfig `yaml:"database"`
+	Rest     *RestConfig     `yaml:"rest"`
 }
 
 type DatabaseConfig struct {
@@ -19,6 +20,10 @@ type DatabaseConfig struct {
 	Password string `yaml:"password"`
 	Database string `yaml:"database"`
 	Prefix   string `yaml:"prefix"`
+}
+
+type RestConfig struct {
+	Port int `yaml:"port"`
 }
 
 func (c *Config) Init(filename string) error {
